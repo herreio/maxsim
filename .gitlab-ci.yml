@@ -5,16 +5,14 @@ stages:
   - test
   - deploy
 
-before_script:
-  - apt-get update
-  - apt-get install -y libgsl-dev
-  - apt-get install -y python3-pip
-  - apt-get install -y libpython3-dev
-  - pip3 install virtualenv
-
 binary:
   stage: build
   before_script:
+    - apt-get update
+    - apt-get install -y libgsl-dev
+    - apt-get install -y python3-pip
+    - apt-get install -y libpython3-dev
+    - pip3 install virtualenv
     - r -e 'install.packages("philentropy")'
     - r -e 'install.packages("BTM")'
     - r -e 'devtools::install_github("herreio/maxplanckr")'
@@ -30,6 +28,8 @@ install:
 pages:
   stage: deploy
   script:
+    - ls -l .
+    - ls -l ..
     - cd ..
     - R CMD build maxsim
     - R CMD install maxsim_0.0.1.tar.gz
