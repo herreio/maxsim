@@ -7,6 +7,10 @@ stages:
 
 before_script:
   - apt-get update
+  - apt-get install -y libgsl-dev
+  - apt-get install -y python3-pip
+  - apt-get install -y libpython3-dev
+  - pip3 install virtualenv
 
 binary:
   stage: build
