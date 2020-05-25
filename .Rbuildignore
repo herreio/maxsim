@@ -1,0 +1,5 @@
+^packrat/
+^\.Rprofile$
+^\.gitignore$
+^\.gitlab-ci.yml$
+^LICENSE\.md$

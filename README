@@ -1,0 +1,21 @@
+# ////////////// #
+# /// maxsim /// #
+# ////////////// #
+
+
+# MEMORY USAGE
+
+To install this package, you need at least 4.5 GB of free RAM.
+To use this package, you need at least 2 GB of free RAM.
+
+
+# INSTALLATION
+
+$ R
+> devtools::install_gitlab("herreio/maxsim")
+
+
+# DOCUMENTATION
+
+$ R
+> help(package="maxsim")

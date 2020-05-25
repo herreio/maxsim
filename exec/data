@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+echo ""
+echo "    prepare package data..."
+echo ""
+Rscript ../data-raw/prepare.R
+echo ""
+echo "    all done!"
+echo ""

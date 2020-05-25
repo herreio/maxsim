@@ -1,0 +1,33 @@
+image: rocker/verse:3.6.2
+
+stages:
+  - build
+  - test
+  - deploy
+
+before_script:
+  - apt-get update
+
+binary:
+  stage: build
+  script:
+    - r -e 'devtools::build(binary = TRUE)'
+
+install:
+  stage: test
+  script:
+    - r -e 'devtools::install()'
+
+pages:
+  stage: deploy
+  script:
+  - cd ..
+  - R CMD build maxsim
+  - R CMD install maxsim_0.0.1.tar.gz
+  - mkdir maxsim/public
+  - mv maxsim_0.0.1.tar.gz maxsim/public/
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
