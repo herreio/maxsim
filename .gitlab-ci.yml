@@ -10,6 +10,11 @@ before_script:
 
 binary:
   stage: build
+  before_script:
+    - r -e 'install.packages("philentropy")'
+    - r -e 'install.packages("BTM")'
+    - r -e 'devtools::install_github("herreio/maxplanckr")'
+    - r -e 'devtools::install_github("herreio/topmodelr")'
   script:
     - r -e 'devtools::build(binary = TRUE)'
 
@@ -21,13 +26,13 @@ install:
 pages:
   stage: deploy
   script:
-  - cd ..
-  - R CMD build maxsim
-  - R CMD install maxsim_0.0.1.tar.gz
-  - mkdir maxsim/public
-  - mv maxsim_0.0.1.tar.gz maxsim/public/
+    - cd ..
+    - R CMD build maxsim
+    - R CMD install maxsim_0.0.1.tar.gz
+    - mkdir maxsim/public
+    - mv maxsim_0.0.1.tar.gz maxsim/public/
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
+    - master
