@@ -10,11 +10,14 @@ pages:
     - R CMD build maxsim
     - mkdir maxsim/public
     - mv maxsim_0.0.1.tar.gz maxsim/public/
+    - R CMD Rd2pdf maxsim
+    - mv maxsim.pdf maxsim/public/
     - cd maxsim/public
     - tree . > ../tree.txt
     - echo "<html><body><pre>" > index.html
     - cat ../tree.txt >> index.html
     - echo "</pre></body></html>" >> index.html
+    - rm ../tree.txt
   artifacts:
     paths:
       - public
