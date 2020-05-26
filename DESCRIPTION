@@ -9,8 +9,8 @@ Authors@R:
            role = c("aut", "cre"),
            email = "mail@herre.io",
            comment = c(ORCID = "0000-0003-4335-2535"))
-Description: .. to do ..
 License: MIT + file LICENSE
+Description: .. to do ..
 URL: https://gitlab.com/herreio/maxsim
 Depends: R (>= 3.5.0)
 Imports:
@@ -26,8 +26,8 @@ Suggests:
     devtools,
     packrat
 Remotes:
-    herreio/topmodelr,
-    herreio/maxplanckr
+    herreio/maxplanckr,
+    herreio/topmodelr
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.0
