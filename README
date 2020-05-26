@@ -5,7 +5,7 @@
 
 # TOPIC MODEL
 
-The model used to calculate topic similarity is the biterm topic model.
+The model used to calculate topic similarity is a biterm topic model.
 
 
 # DATA SET
