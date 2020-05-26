@@ -5,15 +5,13 @@ pages:
   before_script:
     - apt-get update
     - apt-get install -y tree
-    - apt-get install -y xdg-utils
   script:
-    - cd ..
-    - R CMD build maxsim
-    - mkdir maxsim/public
-    - mv maxsim_0.0.1.tar.gz maxsim/public/
-    - R CMD Rd2pdf maxsim
-    - mv maxsim.pdf maxsim/public/
-    - cd maxsim/public
+    - mkdir public
+    - r -e 'devtools::build()'
+    - r -e 'devtools::build_manual()'
+    - mv ../maxsim_0.0.1.tar.gz public/
+    - mv ../maxsim.pdf public/
+    - cd public/
     - tree . > ../tree.txt
     - echo "<html><body><pre>" > index.html
     - cat ../tree.txt >> index.html
