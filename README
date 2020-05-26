@@ -3,6 +3,18 @@
 # ////////////// #
 
 
+# TOPIC MODEL
+
+The model used to calculate topic similarity is the biterm topic model.
+
+
+# DATA SET
+
+The model is based on titles of research publications filed in MPG.PuRe.
+A snapshot of the repository data was taken on Dec 1, 2019.
+The final selection consists of 221,717 publications.
+
+
 # MEMORY USAGE
 
 To install this package, you need at least 4.5 GB of free RAM.
