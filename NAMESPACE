@@ -2,6 +2,7 @@
 
 export(search_dist_items)
 export(search_topic_items)
+export(start_app)
 import(BTM)
 import(dplyr)
 importFrom(stats,predict)

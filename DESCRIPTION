@@ -18,6 +18,7 @@ Imports:
     dplyr,
     maxplanckr,
     philentropy,
+    shiny,
     stats,
     tibble,
     topmodelr,
