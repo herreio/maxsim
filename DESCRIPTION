@@ -2,7 +2,7 @@ Package: maxsim
 Type: Package
 Title: Topic Similarity-Based Search for Scientific Publication Titles
 Version: 0.0.1
-Date: 2020-05-26
+Date: 2020-06-05
 Authors@R:
     person(given = "Donatus",
            family = "Herre",
