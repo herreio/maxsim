@@ -24,7 +24,7 @@ To use this package, you need at least 2 GB of free RAM.
 # INSTALLATION
 
 $ R
-> devtools::install_gitlab("herreio/maxsim")
+> devtools::install_github("herreio/maxsim")
 
 
 # DOCUMENTATION
