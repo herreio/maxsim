@@ -11,7 +11,7 @@ Authors@R:
            comment = c(ORCID = "0000-0003-4335-2535"))
 License: MIT + file LICENSE
 Description: .. to do ..
-URL: https://gitlab.com/herreio/maxsim
+URL: https://github.com/herreio/maxsim
 Depends: R (>= 3.5.0)
 Imports:
     BTM,
