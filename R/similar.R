@@ -38,7 +38,7 @@ search_topic_items <- function(query="information retrieval", n=10) {
 search_dist_items <- function(query="information retrieval", compare=100, n=10) {
   if(!exists("model")) {
     cat("load topic model!\n")
-    data(model, package="simtitle")
+    data(model, package="maxsim")
   }
   # /// infer theta for query /// #
   query_corpus <- topmodelr::corpus_create(query)
@@ -88,6 +88,10 @@ topic_items_prob <- function(topic=1, n=10) {
 }
 
 topic_items <- function(items, topic=1) {
+  if(!exists("items")) {
+      cat("load item topic table!\n")
+      data(items, package="maxsim")
+  }
   topic_items <- items[items$Topic==topic,]$Id
   if(!exists("sel_items")) {
     cat("load publication data!\n")
