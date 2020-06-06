@@ -57,7 +57,7 @@ search_dist_items <- function(query="information retrieval", compare=100, n=10) 
   # /// compute JSD for query and theta of item subset /// #
   if(!exists("theta")) {
     cat("load theta of publications!\n")
-    data(theta, package="simtitle")
+    data(theta, package="maxsim")
   }
   query_items_theta <- theta[query_items$Id,]
   query_n <- length(rownames(query_items_theta))
@@ -80,7 +80,7 @@ search_dist_items <- function(query="information retrieval", compare=100, n=10) 
 topic_items_prob <- function(topic=1, n=10) {
   if(!exists("theta")) {
     cat("load theta of publications!\n")
-    data(theta, package="simtitle")
+    data(theta, package="maxsim")
   }
   topic_theta <- theta[,topic]
   topic_theta <- sort(topic_theta, decreasing=TRUE)
