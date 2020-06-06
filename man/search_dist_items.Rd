@@ -2,7 +2,7 @@
 % Please edit documentation in R/similar.R
 \name{search_dist_items}
 \alias{search_dist_items}
-\title{Search for Items Most Likely Associated with Topic of Query Ranked by Distance}
+\title{Search for Items by Topic Similarity of Query and Subset of Closest Items}
 \usage{
 search_dist_items(query = "information retrieval", compare = 100, n = 10)
 }
@@ -14,5 +14,5 @@ search_dist_items(query = "information retrieval", compare = 100, n = 10)
 \item{n}{Number of items to return.}
 }
 \description{
-Search for Items Most Likely Associated with Topic of Query Ranked by Distance
+Search for Items by Topic Similarity of Query and Subset of Closest Items
 }
